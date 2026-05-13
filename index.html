@@ -6,7 +6,7 @@
 <title>Meadowview Apartments</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&family=Great+Vibes&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --ast-global-color-0: #ffc314;
@@ -45,74 +45,126 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Header */
 .site-header {
-  background: #fff;
-  padding: 15px 40px;
+  background: #4a5fa0;
+  padding: 12px 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 100;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
-.site-header .logo img { max-height: 70px; width: auto; }
+.site-header .logo img { max-height: 55px; width: auto; }
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
 .site-header nav a {
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
-  font-size: 15px;
-  margin-left: 32px;
-  color: var(--text-dark);
+  font-size: 14px;
+  color: #fff;
   text-transform: capitalize;
-  transition: color 0.2s;
+  transition: opacity 0.2s;
+  letter-spacing: 0.3px;
 }
-.site-header nav a:hover { color: var(--accent); }
+.site-header nav a:hover { opacity: 0.8; }
+.site-header .nav-cta {
+  background: var(--accent);
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-transform: capitalize;
+  transition: background 0.2s, color 0.2s;
+}
+.site-header .nav-cta:hover {
+  background: #e6a800;
+  opacity: 1;
+  color: #000;
+}
 
 /* Hero */
 .hero {
   position: relative;
-  min-height: 90vh;
+  min-height: 520px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  background: url('wp-content/uploads/2024/01/Lombard-Drone-Back-1-scaled.jpg') center/cover no-repeat;
+  background: url('wp-content/uploads/2024/01/1-PH-scaled.jpg') center/cover no-repeat;
 }
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(30,30,40,0.50);
 }
-.hero-content {
+.hero-inner {
   position: relative;
   z-index: 2;
-  color: #fff;
-  max-width: 900px;
-  padding: 40px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.hero-content h1 {
-  font-size: 72px;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 16px;
-  line-height: 1.1;
+.hero-text {
+  text-align: left;
+  padding-left: 40px;
 }
-.hero-content .tour-link {
+.hero-text .welcome-script {
+  font-family: 'Great Vibes', cursive;
+  font-size: 80px;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 4px;
+  display: block;
+  font-weight: 400;
+}
+.hero-text .hero-title {
+  font-family: 'Cinzel', serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1.15;
+  margin: 0;
+}
+.hero-tour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.hero-tour span {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.hero-tour .tour-btn {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  margin-top: 24px;
-  font-family: 'Barlow', sans-serif;
-  font-size: 28px;
-  font-weight: 600;
-  color: #fff;
-  transition: color 0.2s;
+  justify-content: center;
+  width: 110px;
+  height: 42px;
+  background: var(--accent);
+  border-radius: 30px;
+  transition: background 0.2s;
 }
-.hero-content .tour-link:hover { color: var(--accent); }
-.hero-content .tour-link svg {
-  width: 36px;
-  height: 36px;
-  fill: currentColor;
+.hero-tour .tour-btn:hover {
+  background: #e6a800;
+}
+.hero-tour .tour-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: #1a1a1a;
 }
 
 /* Welcome */
@@ -339,8 +391,10 @@ img { max-width: 100%; height: auto; display: block; }
   .site-header { padding: 12px 20px; }
   .site-header .logo img { max-height: 50px; }
   .site-header nav a { margin-left: 16px; font-size: 13px; }
-  .hero-content h1 { font-size: 40px; }
-  .hero-content .tour-link { font-size: 20px; }
+  .hero-inner { flex-direction: column; align-items: center; padding: 40px 20px; }
+  .hero-text .welcome-script { font-size: 56px; }
+  .hero-text .hero-title { font-size: 30px; }
+  .hero-tour { margin-top: 30px; margin-right: 0; }
   .welcome, .gallery, .amenities, .contact { padding: 60px 20px; }
   .welcome h2, .gallery h2, .amenities h2 { font-size: 32px; }
   .gallery-grid { grid-template-columns: 1fr; }
@@ -357,21 +411,27 @@ img { max-width: 100%; height: auto; display: block; }
     <img src="wp-content/uploads/2024/04/MV-Logo-Trans.png" alt="Meadowview Apartments">
   </a>
   <nav>
-    <a href="#welcome">Welcome</a>
+    <a href="#welcome">Home</a>
     <a href="#gallery">Gallery</a>
     <a href="#amenities">Amenities</a>
     <a href="#contact">Contact</a>
+    <a href="#contact" class="nav-cta">Contact Us</a>
   </nav>
 </header>
 
 <!-- Hero -->
 <section class="hero">
-  <div class="hero-content">
-    <h1>Welcome<br>Meadowview Apartments</h1>
-    <a href="#contact" class="tour-link">
-      Tour Today!
-      <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"/></svg>
-    </a>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <span class="welcome-script">Welcome</span>
+      <h1 class="hero-title">Meadowview<br>Apartments</h1>
+    </div>
+    <div class="hero-tour">
+      <span>Tour Today!</span>
+      <a href="#contact" class="tour-btn" aria-label="Tour Today">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.8l-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg>
+      </a>
+    </div>
   </div>
 </section>
 
