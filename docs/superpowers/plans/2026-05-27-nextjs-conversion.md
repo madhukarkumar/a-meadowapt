@@ -585,53 +585,46 @@ git commit -m "fix: match static site parity"
 ### Task 7: Decide And Wire Contact Form Behavior
 
 **Files:**
-- Optional create: `app/api/contact/route.ts`
-- Optional create: `components/contact-form.tsx`
-- Optional create: `lib/contact-schema.ts`
 - Modify: `components/contact.tsx`
 
-- [ ] **Step 1: Choose the submission destination**
+- [x] **Step 1: Choose the submission destination**
 
-Pick one concrete destination before coding:
-- Email delivery through Resend, SendGrid, or another provider.
-- CRM submission if JNM Realty has a system for leads.
-- Robynn widget only, removing the local form submission.
-- Static mailto fallback.
+Chosen implementation path: static `mailto:` fallback because no email provider or CRM credentials are available in the repo. Do not add an API route, dependencies, or environment variables for this task.
 
-- [ ] **Step 2: If using an API route, create `app/api/contact/route.ts`**
+Current form fields stay unchanged for static page parity:
+- `name="name"`, placeholder `Name`, required.
+- `name="email"`, placeholder `Email *`, required.
+- `name="subject"`, placeholder `Subject`.
+- `name="message"`, placeholder `Message *`, rows `5`, required.
 
-Use a `POST` route handler and validate these fields:
-- `name`: required string, max 100 characters.
-- `email`: required valid email string, max 254 characters.
-- `phone`: optional string, max 30 characters.
-- `message`: required string, max 2000 characters.
+- [x] **Step 2: Wire static mailto fallback**
 
-- [ ] **Step 3: Move the form into a client component only if needed**
+Keep `components/contact.tsx` as the client component and use browser-native required-field validation. On valid submit, prevent the default page navigation and set `window.location.href` to a `mailto:` URL for `siteInfo.email`.
 
-Create `components/contact-form.tsx` with `'use client'` only if the form needs client-side pending, success, and error states.
+The mailto URL uses:
+- Subject: the provided subject, or `Meadowview Apartments Tour Request` when blank.
+- Body: Name, Email, Subject, and Message on separate readable lines.
 
-- [ ] **Step 4: Add environment variables outside source control**
-
-Use `.env.local` for provider credentials. Do not commit secrets.
-
-- [ ] **Step 5: Test submission**
+- [x] **Step 3: Test submission**
 
 Run:
 
 ```bash
-npm run dev
+npm run lint
+npm run build
 ```
 
 Expected:
-- Empty fields show validation errors.
-- Valid submission reaches the selected destination.
-- The user sees a clear success state.
+- Lint succeeds.
+- Production build succeeds.
+- Empty required fields keep browser-native validation.
+- Valid submission opens the encoded mailto destination.
 
-- [ ] **Step 6: Commit contact behavior**
+- [x] **Step 4: Commit contact behavior**
 
 ```bash
-git add app/api components lib
-git commit -m "feat: add contact form submission"
+git add components/contact.tsx docs/superpowers/plans/2026-05-27-nextjs-conversion.md
+git commit -m "feat: add mailto contact fallback"
 ```
 
 ---

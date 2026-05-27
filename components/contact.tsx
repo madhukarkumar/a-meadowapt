@@ -1,5 +1,7 @@
 'use client';
 
+import type { FormEvent } from 'react';
+
 import { siteInfo } from '@/lib/site-content';
 
 function PhoneIcon() {
@@ -19,6 +21,26 @@ function EmailIcon() {
 }
 
 export function Contact() {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const name = String(formData.get('name') ?? '');
+    const email = String(formData.get('email') ?? '');
+    const providedSubject = String(formData.get('subject') ?? '').trim();
+    const subject = providedSubject || 'Meadowview Apartments Tour Request';
+    const message = String(formData.get('message') ?? '');
+    const body = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Subject: ${subject}`,
+      `Message: ${message}`,
+    ].join('\n');
+    const params = new URLSearchParams({ subject, body });
+
+    window.location.href = `mailto:${siteInfo.email}?${params.toString()}`;
+  }
+
   return (
     <section className="contact" id="contact">
       <div className="contact-wrapper">
@@ -49,7 +71,7 @@ export function Contact() {
           ></iframe>
         </div>
         <div className="contact-form">
-          <form onSubmit={(event) => event.preventDefault()}>
+          <form onSubmit={handleSubmit}>
             <div className="form-group">
               <input
                 type="text"
