@@ -51,16 +51,33 @@ export function Contact() {
         <div className="contact-form">
           <form onSubmit={(event) => event.preventDefault()}>
             <div className="form-group">
-              <input type="text" placeholder="Name" required />
+              <input
+                type="text"
+                name="name"
+                autoComplete="name"
+                placeholder="Name"
+                required
+              />
             </div>
             <div className="form-group">
-              <input type="email" placeholder="Email *" required />
+              <input
+                type="email"
+                name="email"
+                autoComplete="email"
+                placeholder="Email *"
+                required
+              />
             </div>
             <div className="form-group">
-              <input type="text" placeholder="Subject" />
+              <input type="text" name="subject" placeholder="Subject" />
             </div>
             <div className="form-group">
-              <textarea placeholder="Message *" required></textarea>
+              <textarea
+                name="message"
+                placeholder="Message *"
+                rows={5}
+                required
+              ></textarea>
             </div>
             <button type="submit" className="btn-primary">
               Contact Us

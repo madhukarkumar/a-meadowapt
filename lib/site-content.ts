@@ -22,34 +22,50 @@ export const galleryImages = [
   {
     src: '/wp-content/uploads/2024/01/Lombard-Drone-Back-1-scaled.jpg',
     alt: 'Aerial view',
+    width: 1600,
+    height: 1067,
   },
   {
     src: '/wp-content/uploads/2024/01/1-PH-scaled.jpg',
     alt: 'Interior',
+    width: 1600,
+    height: 1067,
   },
   {
     src: '/wp-content/uploads/2024/01/2-PH-scaled.jpg',
     alt: 'Interior',
+    width: 1600,
+    height: 1067,
   },
   {
     src: '/wp-content/uploads/2024/01/3-PH-scaled.jpg',
     alt: 'Interior',
+    width: 1600,
+    height: 1067,
   },
   {
     src: '/wp-content/uploads/2024/01/4-PH-scaled.jpg',
     alt: 'Interior',
+    width: 1600,
+    height: 911,
   },
   {
     src: '/wp-content/uploads/2024/01/5-PH-scaled.jpg',
     alt: 'Interior',
+    width: 1600,
+    height: 911,
   },
   {
     src: '/wp-content/uploads/2024/01/Kitchen.jpg',
     alt: 'Kitchen',
+    width: 750,
+    height: 428,
   },
   {
     src: '/wp-content/uploads/2024/01/Lombard-12-scaled.jpg',
     alt: 'Exterior',
+    width: 1600,
+    height: 1068,
   },
 ] as const;
 
