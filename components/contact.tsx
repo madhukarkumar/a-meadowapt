@@ -36,9 +36,10 @@ export function Contact() {
       `Subject: ${subject}`,
       `Message: ${message}`,
     ].join('\n');
-    const params = new URLSearchParams({ subject, body });
+    const encodedSubject = encodeURIComponent(subject);
+    const encodedBody = encodeURIComponent(body);
 
-    window.location.href = `mailto:${siteInfo.email}?${params.toString()}`;
+    window.location.href = `mailto:${siteInfo.email}?subject=${encodedSubject}&body=${encodedBody}`;
   }
 
   return (
