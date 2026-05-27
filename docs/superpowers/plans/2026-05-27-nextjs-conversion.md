@@ -276,35 +276,35 @@ export const navCta = { label: 'Contact Us', href: '#contact' } as const;
 export const galleryImages = [
   {
     src: '/wp-content/uploads/2024/01/Lombard-Drone-Back-1-scaled.jpg',
-    alt: 'Aerial view of Meadowview Apartments',
+    alt: 'Aerial view',
   },
   {
     src: '/wp-content/uploads/2024/01/1-PH-scaled.jpg',
-    alt: 'Apartment interior',
+    alt: 'Interior',
   },
   {
     src: '/wp-content/uploads/2024/01/2-PH-scaled.jpg',
-    alt: 'Apartment interior',
+    alt: 'Interior',
   },
   {
     src: '/wp-content/uploads/2024/01/3-PH-scaled.jpg',
-    alt: 'Apartment interior',
+    alt: 'Interior',
   },
   {
     src: '/wp-content/uploads/2024/01/4-PH-scaled.jpg',
-    alt: 'Apartment interior',
+    alt: 'Interior',
   },
   {
     src: '/wp-content/uploads/2024/01/5-PH-scaled.jpg',
-    alt: 'Apartment interior',
+    alt: 'Interior',
   },
   {
     src: '/wp-content/uploads/2024/01/Kitchen.jpg',
-    alt: 'Apartment kitchen',
+    alt: 'Kitchen',
   },
   {
     src: '/wp-content/uploads/2024/01/Lombard-12-scaled.jpg',
-    alt: 'Meadowview Apartments exterior',
+    alt: 'Exterior',
   },
 ] as const;
 
