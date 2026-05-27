@@ -690,4 +690,3 @@ vercel
 2. Where should the contact form submit?
 3. Should the Robynn widget remain on every page, or only the homepage?
 4. Should image filenames and `/wp-content/...` public URLs be preserved for compatibility, or should assets be renamed into a cleaner `/images/...` structure after parity?
-
