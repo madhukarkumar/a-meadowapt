@@ -8,7 +8,7 @@ export function Welcome() {
         Looking for a quiet, convenient place to live in Springfield, Missouri?
         Consider the Meadowview Apartments. These apartments offer access to
         parks, jogging and bicycle paths, schools, churches, shopping, dining,
-        and entertainment - perfect for those who appreciate convenience,
+        and entertainment – perfect for those who appreciate convenience,
         comfort, and privacy.
       </p>
       <a href={navCta.href} className="btn-primary">

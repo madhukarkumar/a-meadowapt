@@ -1,3 +1,5 @@
+'use client';
+
 import { siteInfo } from '@/lib/site-content';
 
 function PhoneIcon() {
@@ -47,7 +49,7 @@ export function Contact() {
           ></iframe>
         </div>
         <div className="contact-form">
-          <form action="#">
+          <form onSubmit={(event) => event.preventDefault()}>
             <div className="form-group">
               <input type="text" placeholder="Name" required />
             </div>
