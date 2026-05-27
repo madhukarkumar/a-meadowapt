@@ -1,4 +1,5 @@
 {
+  "name": "meadowapartment-nextjs",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
