@@ -7,7 +7,7 @@ export const siteInfo = {
   address: ['3460 E Lombard St', 'Springfield, MO 65809'],
   mapSrc:
     'https://maps.google.com/maps?q=3460%20E%20Lombard%20St%20Springfield%2C%20MO%2065809&t=m&z=10&output=embed&iwloc=near',
-};
+} as const;
 
 export const navItems = [
   { label: 'Home', href: '#welcome' },
@@ -21,35 +21,35 @@ export const navCta = { label: 'Contact Us', href: '#contact' } as const;
 export const galleryImages = [
   {
     src: '/wp-content/uploads/2024/01/Lombard-Drone-Back-1-scaled.jpg',
-    alt: 'Aerial view of Meadowview Apartments',
+    alt: 'Aerial view',
   },
   {
     src: '/wp-content/uploads/2024/01/1-PH-scaled.jpg',
-    alt: 'Apartment interior',
+    alt: 'Interior',
   },
   {
     src: '/wp-content/uploads/2024/01/2-PH-scaled.jpg',
-    alt: 'Apartment interior',
+    alt: 'Interior',
   },
   {
     src: '/wp-content/uploads/2024/01/3-PH-scaled.jpg',
-    alt: 'Apartment interior',
+    alt: 'Interior',
   },
   {
     src: '/wp-content/uploads/2024/01/4-PH-scaled.jpg',
-    alt: 'Apartment interior',
+    alt: 'Interior',
   },
   {
     src: '/wp-content/uploads/2024/01/5-PH-scaled.jpg',
-    alt: 'Apartment interior',
+    alt: 'Interior',
   },
   {
     src: '/wp-content/uploads/2024/01/Kitchen.jpg',
-    alt: 'Apartment kitchen',
+    alt: 'Kitchen',
   },
   {
     src: '/wp-content/uploads/2024/01/Lombard-12-scaled.jpg',
-    alt: 'Meadowview Apartments exterior',
+    alt: 'Exterior',
   },
 ] as const;
 

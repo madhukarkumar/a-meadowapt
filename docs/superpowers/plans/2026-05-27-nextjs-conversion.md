@@ -397,16 +397,16 @@ Render phone, email, map iframe, and the current form fields. Keep the form non-
 ```tsx
 <form>
   <div className="form-group">
-    <input type="text" name="name" placeholder="Name" autoComplete="name" />
+    <input type="text" name="name" placeholder="Name" autoComplete="name" required />
   </div>
   <div className="form-group">
-    <input type="email" name="email" placeholder="Email" autoComplete="email" />
+    <input type="email" name="email" placeholder="Email *" autoComplete="email" required />
   </div>
   <div className="form-group">
-    <input type="tel" name="phone" placeholder="Phone" autoComplete="tel" />
+    <input type="text" name="subject" placeholder="Subject" />
   </div>
   <div className="form-group">
-    <textarea name="message" placeholder="Message" rows={5} />
+    <textarea name="message" placeholder="Message *" rows={5} required />
   </div>
   <button type="submit" className="btn-primary">Contact Us</button>
 </form>
