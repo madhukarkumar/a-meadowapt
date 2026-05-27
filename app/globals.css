@@ -528,3 +528,26 @@ img {
     gap: 40px;
   }
 }
+
+@media (max-width: 640px) {
+  .site-header {
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .site-header .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .site-header nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 16px;
+  }
+
+  .site-header nav a {
+    margin-left: 0;
+  }
+}
